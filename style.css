@@ -1,0 +1,243 @@
+/* Front-end Style Guide */
+
+/* Layout */
+.container {
+    max-width: 440px;
+    margin: 100px auto;
+    padding: 0 20px;
+  }
+  
+  /* Colors */
+  :root {
+    --primary-color: hsl(25, 97%, 53%);
+    --white-color: hsl(0, 0%, 100%);
+    --light-grey-color: hsl(217, 12%, 63%);
+    --medium-grey-color: hsl(216, 12%, 54%);
+    --dark-blue-color: hsl(213, 19%, 18%);
+    --very-dark-blue-color: hsl(216, 12%, 8%);
+  }
+  
+  /* Typography */
+  body {
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    background-color: var(--very-dark-blue-color);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    margin-top: 0;
+  }
+  
+  p {
+    margin-top: 0;
+  }
+  
+  
+/* .image-1 {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 0 10px 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  display: inline-block;
+
+  font-weight: bold;
+  width: 10%;
+  line-height: 40px;
+  text-align: center;
+} */
+
+  /* Rating Container */
+  .rating-container {
+    background-color: var(--dark-blue-color);
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transform: scaleY(1.1);
+}
+
+  
+  /* Rating Title */
+  .rating-container h2 {
+    color: var(--white-color);
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Rating Message */
+  .rating-message {
+    color: var(--light-grey-color);
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  /* Rating Numbers */
+  .rating-numbers {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    
+  }
+  
+  .rating-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--medium-grey-color);
+    cursor: pointer;
+    background-color: rgba(71, 73, 77, 0.4);
+    border-radius: 50%;
+    height: 50px;
+    width: 90%;
+    font-size: 15px;
+    margin: 0  10px 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .rating-number:hover {
+    transform: scale(1.2);
+    color: var(--white-color);
+    background-color: var(--primary-color);
+  }
+  
+
+  .rating-number.selected {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+  }
+  
+  /* Rating Stars */
+  /* .rating-stars {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .rating-star {
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 30px;
+    margin: 0 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .rating-star:hover {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+  }
+  
+  .rating-star.selected {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+  } */
+  
+  /* Submit Button */
+  .submit-rating {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 20px;
+    color: var(--white-color);
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    }
+  
+  .submit-rating:hover {
+    color: var(--primary-color);
+    background-color:var(--white-color);
+  }
+  
+  /* Thank You Card */
+  .thank-you-card {
+    background-color: var(--dark-blue-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .thank-you-card h3 {
+    color: var(--white-color);
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+
+  .thank-you-card p {
+    color: var(--light-grey-color);
+    font-size: 18px;
+    margin-bottom: 20px;
+    }
+
+
+    .selected-rating-message {
+      background-color: rgba(71, 73, 77, 0.4);
+      color:var(--primary-color ) !important;
+      border-radius: 25px;
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      
+    }
+
+    
+#next-rating-container {
+  display: flex;
+}
+
+#next-rating-container {
+  display: none;
+}
+
+
+::after #next-rating-container {
+  display: contents;
+}
+
+
+    /* Media Queries */
+    @media screen and (max-width: 768px) {
+    .container {
+    padding: 0 10px;
+    }
+    
+    .rating-container {
+    padding: 30px;
+    }
+    
+    .rating-message {
+    font-size: 16px;
+    }
+    
+    .rating-number {
+      height: 30px;
+      width: 100%;
+    font-size: 12px;
+    }
+    
+    .rating-star {
+    font-size: 20px;
+    }
+    
+    .submit-rating {
+    font-size: 16px;
+    padding: 8px 16px;
+    }
+    
+    .thank-you-card h3 {
+    font-size: 20px;
+    }
+    
+    .thank-you-card p {
+    font-size: 16px;
+    }
+    }
